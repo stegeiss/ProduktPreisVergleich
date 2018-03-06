@@ -1,12 +1,12 @@
 ﻿@model WebSeite.Models.AnschriftGeschaeft
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Bearbeiten";
 }
 
-<h2>Edit</h2>
+<h2>Bearbeiten</h2>
 
-<h4>AnschriftGeschaeft</h4>
+<h4>Anschrift Geschaeft</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -81,6 +81,8 @@
 </div>
 
 <div>
+    <a asp-action="Details" asp-route-id="@Model.AnschriftGeschaeftID">Details</a> |
+    <a asp-action="Delete" asp-route-id="@Model.AnschriftGeschaeftID">Delete</a> |
     <a asp-action="Index">Back to List</a>
 </div>
 
