@@ -1,0 +1,93 @@
+﻿@model WebSeite.Models.AnschriftHersteller
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>AnschriftHersteller</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Kundennummer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Kundennummer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Strasse)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Strasse)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Hausnummer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Hausnummer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ort)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ort)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Zusatz)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Zusatz)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PLZ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PLZ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Homepage)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Homepage)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefonnummer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Telefonnummer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Fax)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fax)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Handy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Handy)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="AnschriftHerstellerID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

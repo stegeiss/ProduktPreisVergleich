@@ -1,0 +1,63 @@
+﻿@model WebSeite.Models.Produkt
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Produkt</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Produktname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Produktname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Inhalt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Inhalt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InhaltMesseinheit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InhaltMesseinheit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Zusatztext)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Zusatztext)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Produktcode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Produktcode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProduktKategorieId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProduktKategorieId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Hersteller)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Hersteller.Name)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ProduktId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

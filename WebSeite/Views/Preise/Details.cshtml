@@ -1,0 +1,42 @@
+﻿@model WebSeite.Models.Preis
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Preis</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Kosten)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Kosten)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PreisDatum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PreisDatum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Anschrift)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Anschrift.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Produkt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Produkt.ProduktId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PreisId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

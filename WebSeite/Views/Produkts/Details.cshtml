@@ -1,0 +1,60 @@
+﻿@model WebSeite.Models.Produkt
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Produkt</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Produktname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Produktname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Inhalt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Inhalt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InhaltMesseinheit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InhaltMesseinheit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Zusatztext)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Zusatztext)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Produktcode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Produktcode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProduktKategorieId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProduktKategorieId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Hersteller)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Hersteller.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ProduktId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,101 @@
+﻿@model IEnumerable<WebSeite.Models.AnschriftHersteller>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kundennummer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Strasse)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Hausnummer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ort)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Zusatz)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PLZ)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Homepage)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telefonnummer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fax)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Handy)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kundennummer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Strasse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hausnummer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ort)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zusatz)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PLZ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Homepage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefonnummer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Handy)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AnschriftHerstellerID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AnschriftHerstellerID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AnschriftHerstellerID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
