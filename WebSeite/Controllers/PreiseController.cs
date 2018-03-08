@@ -18,14 +18,14 @@ namespace WebSeite.Controllers
             _context = context;
         }
 
-        // GET: Preise
+        // GET: Preis
         public async Task<IActionResult> Index()
         {
             var produktContext = _context.Preis.Include(p => p.Anschrift).Include(p => p.Produkt);
             return View(await produktContext.ToListAsync());
         }
 
-        // GET: Preise/Details/5
+        // GET: Preis/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -45,20 +45,20 @@ namespace WebSeite.Controllers
             return View(preis);
         }
 
-        // GET: Preise/Create
+        // GET: Preis/Create
         public IActionResult Create()
         {
-            ViewData["AnschriftHerstellerID"] = new SelectList(_context.Hersteller, "AnschriftHerstellerID", "Name");
-            ViewData["ProduktId"] = new SelectList(_context.Produkt, "ProduktId", "Produktname");
+            ViewData["AnschriftGeschaeftID"] = new SelectList(_context.Geschaeft, "AnschriftGeschaeftID", "Name");
+            ViewData["ProduktId"] = new SelectList(_context.Produkt, "ProduktId", "Name");
             return View();
         }
 
-        // POST: Preise/Create
+        // POST: Preis/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PreisId,Kosten,PreisDatum,ProduktId,AnschriftHerstellerID")] Preis preis)
+        public async Task<IActionResult> Create([Bind("PreisId,Kosten,PreisDatum,ProduktId,AnschriftGeschaeftID")] Preis preis)
         {
             if (ModelState.IsValid)
             {
@@ -66,12 +66,12 @@ namespace WebSeite.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AnschriftHerstellerID"] = new SelectList(_context.Hersteller, "AnschriftHerstellerID", "Name", preis.AnschriftHerstellerID);
-            ViewData["ProduktId"] = new SelectList(_context.Produkt, "ProduktId", "Produktname", preis.ProduktId);
+            ViewData["AnschriftGeschaeftID"] = new SelectList(_context.Geschaeft, "AnschriftGeschaeftID", "Name", preis.AnschriftGeschaeftID);
+            ViewData["ProduktId"] = new SelectList(_context.Produkt, "ProduktId", "ProduktId", preis.ProduktId);
             return View(preis);
         }
 
-        // GET: Preise/Edit/5
+        // GET: Preis/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -84,17 +84,17 @@ namespace WebSeite.Controllers
             {
                 return NotFound();
             }
-            ViewData["AnschriftHerstellerID"] = new SelectList(_context.Hersteller, "AnschriftHerstellerID", "Name", preis.AnschriftHerstellerID);
-            ViewData["ProduktId"] = new SelectList(_context.Produkt, "ProduktId", "Produktname", preis.ProduktId);
+            ViewData["AnschriftGeschaeftID"] = new SelectList(_context.Geschaeft, "AnschriftGeschaeftID", "Name", preis.AnschriftGeschaeftID);
+            ViewData["ProduktId"] = new SelectList(_context.Produkt, "ProduktId", "ProduktId", preis.ProduktId);
             return View(preis);
         }
 
-        // POST: Preise/Edit/5
+        // POST: Preis/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PreisId,Kosten,PreisDatum,ProduktId,AnschriftHerstellerID")] Preis preis)
+        public async Task<IActionResult> Edit(int id, [Bind("PreisId,Kosten,PreisDatum,ProduktId,AnschriftGeschaeftID")] Preis preis)
         {
             if (id != preis.PreisId)
             {
@@ -121,12 +121,12 @@ namespace WebSeite.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AnschriftHerstellerID"] = new SelectList(_context.Hersteller, "AnschriftHerstellerID", "Name", preis.AnschriftHerstellerID);
+            ViewData["AnschriftGeschaeftID"] = new SelectList(_context.Geschaeft, "AnschriftGeschaeftID", "Name", preis.AnschriftGeschaeftID);
             ViewData["ProduktId"] = new SelectList(_context.Produkt, "ProduktId", "ProduktId", preis.ProduktId);
             return View(preis);
         }
 
-        // GET: Preise/Delete/5
+        // GET: Preis/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -146,7 +146,7 @@ namespace WebSeite.Controllers
             return View(preis);
         }
 
-        // POST: Preise/Delete/5
+        // POST: Preis/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

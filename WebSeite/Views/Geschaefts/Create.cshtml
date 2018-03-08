@@ -1,10 +1,10 @@
 ﻿@model WebSeite.Models.AnschriftGeschaeft
 
 @{
-    ViewData["Title"] = "Erstellen";
+    ViewData["Title"] = "Create";
 }
 
-<h2>Erstellen Geschäft</h2>
+<h2>Create</h2>
 
 <h4>AnschriftGeschaeft</h4>
 <hr />
@@ -33,6 +33,11 @@
                 <span asp-validation-for="Hausnummer" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="PLZ" class="control-label"></label>
+                <input asp-for="PLZ" class="form-control" />
+                <span asp-validation-for="PLZ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Ort" class="control-label"></label>
                 <input asp-for="Ort" class="form-control" />
                 <span asp-validation-for="Ort" class="text-danger"></span>
@@ -41,11 +46,6 @@
                 <label asp-for="Zusatz" class="control-label"></label>
                 <input asp-for="Zusatz" class="form-control" />
                 <span asp-validation-for="Zusatz" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PLZ" class="control-label"></label>
-                <input asp-for="PLZ" class="form-control" />
-                <span asp-validation-for="PLZ" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Email" class="control-label"></label>
@@ -71,6 +71,41 @@
                 <label asp-for="Handy" class="control-label"></label>
                 <input asp-for="Handy" class="form-control" />
                 <span asp-validation-for="Handy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OeffnungsZeitenMontag" class="control-label"></label>
+                <input asp-for="OeffnungsZeitenMontag" class="form-control" />
+                <span asp-validation-for="OeffnungsZeitenMontag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OeffnungsZeitenDienstag" class="control-label"></label>
+                <input asp-for="OeffnungsZeitenDienstag" class="form-control" />
+                <span asp-validation-for="OeffnungsZeitenDienstag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OeffnungsZeitenMittwoch" class="control-label"></label>
+                <input asp-for="OeffnungsZeitenMittwoch" class="form-control" />
+                <span asp-validation-for="OeffnungsZeitenMittwoch" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OeffnungsZeitenDonnerstag" class="control-label"></label>
+                <input asp-for="OeffnungsZeitenDonnerstag" class="form-control" />
+                <span asp-validation-for="OeffnungsZeitenDonnerstag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OeffnungsZeitenFreitag" class="control-label"></label>
+                <input asp-for="OeffnungsZeitenFreitag" class="form-control" />
+                <span asp-validation-for="OeffnungsZeitenFreitag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OeffnungsZeitenSamstag" class="control-label"></label>
+                <input asp-for="OeffnungsZeitenSamstag" class="form-control" />
+                <span asp-validation-for="OeffnungsZeitenSamstag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OeffnungsZeitenSonntag" class="control-label"></label>
+                <input asp-for="OeffnungsZeitenSonntag" class="form-control" />
+                <span asp-validation-for="OeffnungsZeitenSonntag" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />

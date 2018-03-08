@@ -13,7 +13,16 @@
     <thead>
         <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.Produktname)
+                    @Html.DisplayNameFor(model => model.ProduktKategorieId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProduktTyp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProduktName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Zusatztext)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Inhalt)
@@ -22,13 +31,10 @@
                     @Html.DisplayNameFor(model => model.InhaltMesseinheit)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Zusatztext)
+                    @Html.DisplayNameFor(model => model.IstBio)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Produktcode)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ProduktKategorieId)
                 </th>
             <th>
                 @Html.DisplayNameFor(model => model.Hersteller)
@@ -40,7 +46,16 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Produktname)
+                @Html.DisplayFor(modelItem => item.ProduktKategorieId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProduktTyp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProduktName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zusatztext)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Inhalt)
@@ -49,13 +64,10 @@
                 @Html.DisplayFor(modelItem => item.InhaltMesseinheit)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Zusatztext)
+                @Html.DisplayFor(modelItem => item.IstBio)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Produktcode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Produktname)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Hersteller.Name)

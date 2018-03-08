@@ -53,7 +53,7 @@ namespace WebSeite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AnschriftGeschaeftID,Name,Kundennummer,Strasse,Hausnummer,Ort,Zusatz,PLZ,Email,Homepage,Telefonnummer,Fax,Handy")] AnschriftGeschaeft anschriftGeschaeft)
+        public async Task<IActionResult> Create([Bind("AnschriftGeschaeftID,Name,Kundennummer,Strasse,Hausnummer,PLZ,Ort,Zusatz,Email,Homepage,Telefonnummer,Fax,Handy,OeffnungsZeitenMontag,OeffnungsZeitenDienstag,OeffnungsZeitenMittwoch,OeffnungsZeitenDonnerstag,OeffnungsZeitenFreitag,OeffnungsZeitenSamstag,OeffnungsZeitenSonntag")] AnschriftGeschaeft anschriftGeschaeft)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace WebSeite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AnschriftGeschaeftID,Name,Kundennummer,Strasse,Hausnummer,Ort,Zusatz,PLZ,Email,Homepage,Telefonnummer,Fax,Handy")] AnschriftGeschaeft anschriftGeschaeft)
+        public async Task<IActionResult> Edit(int id, [Bind("AnschriftGeschaeftID,Name,Kundennummer,Strasse,Hausnummer,PLZ,Ort,Zusatz,Email,Homepage,Telefonnummer,Fax,Handy,OeffnungsZeitenMontag,OeffnungsZeitenDienstag,OeffnungsZeitenMittwoch,OeffnungsZeitenDonnerstag,OeffnungsZeitenFreitag,OeffnungsZeitenSamstag,OeffnungsZeitenSonntag")] AnschriftGeschaeft anschriftGeschaeft)
         {
             if (id != anschriftGeschaeft.AnschriftGeschaeftID)
             {

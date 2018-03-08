@@ -14,7 +14,7 @@ namespace WebSeite.Models
         public string PreisDatum { get; set; }
         public int? ProduktId { get; set; }
         public Produkt Produkt { get; set; }
-        public int AnschriftHerstellerID { get; set; }
-        public AnschriftHersteller Anschrift { get; set; }
+        public int AnschriftGeschaeftID { get; set; }
+        public AnschriftGeschaeft Anschrift { get; set; }
     }
 }

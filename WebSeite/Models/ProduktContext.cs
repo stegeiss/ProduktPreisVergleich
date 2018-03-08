@@ -11,7 +11,6 @@ namespace WebSeite.Models
     {
         public ProduktContext(DbContextOptions<ProduktContext> options) : base(options)
         {
-
         }
         public DbSet<Produkt> Produkt { get; set; }
         public DbSet<AnschriftHersteller> Hersteller { get; set; }

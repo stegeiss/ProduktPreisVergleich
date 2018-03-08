@@ -21,7 +21,8 @@ namespace WebSeite.Controllers
         // GET: Produkts
         public async Task<IActionResult> Index()
         {
-            var produktContext = _context.Produkt.Include(p => p.Hersteller);
+            var produktContext = _context.Produkt.Include(p => p.Hersteller)
+                                                    .Include(k => k.ProduktKategorie);
             return View(await produktContext.ToListAsync());
         }
 
@@ -57,7 +58,7 @@ namespace WebSeite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProduktId,AnschriftHerstellerID,Produktname,Inhalt,InhaltMesseinheit,Zusatztext,Produktcode,ProduktKategorieId")] Produkt produkt)
+        public async Task<IActionResult> Create([Bind("ProduktId,AnschriftHerstellerID,ProduktKategorieId,ProduktTyp,ProduktName,Zusatztext,Inhalt,InhaltMesseinheit,IstBio,Produktcode")] Produkt produkt)
         {
             if (ModelState.IsValid)
             {
@@ -66,6 +67,7 @@ namespace WebSeite.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["AnschriftHerstellerID"] = new SelectList(_context.Hersteller, "AnschriftHerstellerID", "Name", produkt.AnschriftHerstellerID);
+            ViewData["ProduktKategorieId"] = new SelectList(_context.Kategorie, "ProduktKategorieId", "Name");
             return View(produkt);
         }
 
@@ -91,7 +93,7 @@ namespace WebSeite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProduktId,AnschriftHerstellerID,Produktname,Inhalt,InhaltMesseinheit,Zusatztext,Produktcode,ProduktKategorieId")] Produkt produkt)
+        public async Task<IActionResult> Edit(int id, [Bind("ProduktId,AnschriftHerstellerID,ProduktKategorieId,ProduktTyp,ProduktName,Zusatztext,Inhalt,InhaltMesseinheit,IstBio,Produktcode")] Produkt produkt)
         {
             if (id != produkt.ProduktId)
             {

@@ -17,9 +17,23 @@
                 <select asp-for="AnschriftHerstellerID" class="form-control" asp-items="ViewBag.AnschriftHerstellerID"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Produktname" class="control-label"></label>
-                <input asp-for="Produktname" class="form-control" />
-                <span asp-validation-for="Produktname" class="text-danger"></span>
+                <label asp-for="ProduktKategorieId" class="control-label"></label>
+                <select asp-for="ProduktKategorieId" class="form-control" asp-items="ViewBag.ProduktKategorieId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProduktTyp" class="control-label"></label>
+                <input asp-for="ProduktTyp" class="form-control" />
+                <span asp-validation-for="ProduktTyp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProduktName" class="control-label"></label>
+                <input asp-for="ProduktName" class="form-control" />
+                <span asp-validation-for="ProduktName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Zusatztext" class="control-label"></label>
+                <input asp-for="Zusatztext" class="form-control" />
+                <span asp-validation-for="Zusatztext" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Inhalt" class="control-label"></label>
@@ -31,18 +45,16 @@
                 <select asp-for="InhaltMesseinheit" class="form-control" asp-items="Html.GetEnumSelectList<InhaltMesseinheit>()"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Zusatztext" class="control-label"></label>
-                <input asp-for="Zusatztext" class="form-control" />
-                <span asp-validation-for="Zusatztext" class="text-danger"></span>
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IstBio" /> @Html.DisplayNameFor(model => model.IstBio)
+                    </label>
+                </div>
             </div>
             <div class="form-group">
                 <label asp-for="Produktcode" class="control-label"></label>
                 <input asp-for="Produktcode" class="form-control" />
                 <span asp-validation-for="Produktcode" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ProduktKategorieId" class="control-label"></label>
-                <select asp-for="ProduktKategorieId" class="form-control" asp-items="ViewBag.ProduktKategorieId"></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />

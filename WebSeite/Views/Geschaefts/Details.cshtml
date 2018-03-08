@@ -7,7 +7,7 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Anschrift Geschaeft</h4>
+    <h4>AnschriftGeschaeft</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -35,6 +35,12 @@
             @Html.DisplayFor(model => model.Hausnummer)
         </dd>
         <dt>
+            @Html.DisplayNameFor(model => model.PLZ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PLZ)
+        </dd>
+        <dt>
             @Html.DisplayNameFor(model => model.Ort)
         </dt>
         <dd>
@@ -45,12 +51,6 @@
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Zusatz)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.PLZ)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.PLZ)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Email)
@@ -81,6 +81,48 @@
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Handy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OeffnungsZeitenMontag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OeffnungsZeitenMontag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OeffnungsZeitenDienstag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OeffnungsZeitenDienstag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OeffnungsZeitenMittwoch)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OeffnungsZeitenMittwoch)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OeffnungsZeitenDonnerstag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OeffnungsZeitenDonnerstag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OeffnungsZeitenFreitag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OeffnungsZeitenFreitag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OeffnungsZeitenSamstag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OeffnungsZeitenSamstag)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OeffnungsZeitenSonntag)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OeffnungsZeitenSonntag)
         </dd>
     </dl>
 </div>
